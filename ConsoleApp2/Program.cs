@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp2
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			//Console.WriteLine("Hello world");
-			//byte userAge = 20;
-			//int numberOfEmployees = 510;
 
-
+			Console.WriteLine("hello word");
 		}
 	}
 }
