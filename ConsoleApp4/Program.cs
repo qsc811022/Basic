@@ -4,7 +4,12 @@
 	{
 		static void Main(string[] args)
 		{
+			SayHi();
 
+		}
+		static void SayHi()
+		{
+            Console.WriteLine("hell world");
         }
 	}
 }
