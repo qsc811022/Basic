@@ -9,7 +9,8 @@ namespace WebApplication1.Service
 {
 	public class messageDBService
 	{
-		public WebApplication1.Models.db1Entities db =new Models.db1Entities();
+		//public WebApplication1.Models.db1Entities db =new Models.db1Entities();
+		public WebApplication1.Models.db1Entities1 db = new db1Entities1();
 		public List<Article> GetData()
 		{
 			return(db.Articles.ToList());
@@ -17,11 +18,13 @@ namespace WebApplication1.Service
 
 		public void DBCreate(string Article_title, string Content)
 		{
-			Article New = new Article();
-			New.Title=Article_title;
-			New.Content=Content;
-			New.time=DateTime.Now;
-			db.Articles.Add(New);
+			Article NewData = new Article();
+			NewData.Title=Article_title;
+			NewData.Content=Content;
+			NewData.time=DateTime.Now;
+
+			db.Articles.Add(NewData);
+
 			db.SaveChanges();
 		}
 	}

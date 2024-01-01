@@ -5,14 +5,9 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="db1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'db1.dbo.Article' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Article">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Content" />
-            <PropertyRef Name="time" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -20,14 +15,7 @@ warning 6002: The table/view 'db1.dbo.Article' does not have a primary key defin
           <Property Name="time" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="db1ModelStoreContainer">
-          <EntitySet Name="Article" EntityType="Self.Article" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Article].[Id] AS [Id], 
-    [Article].[Title] AS [Title], 
-    [Article].[Content] AS [Content], 
-    [Article].[time] AS [time]
-    FROM [dbo].[Article] AS [Article]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -37,16 +25,13 @@ warning 6002: The table/view 'db1.dbo.Article' does not have a primary key defin
         <EntityType Name="Article">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Content" />
-            <PropertyRef Name="time" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="db1Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db1Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articles" EntityType="Self.Article" />
         </EntityContainer>
       </Schema>
@@ -54,7 +39,7 @@ warning 6002: The table/view 'db1.dbo.Article' does not have a primary key defin
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db1ModelStoreContainer" CdmEntityContainer="db1Entities">
+        <EntityContainerMapping StorageEntityContainer="db1ModelStoreContainer" CdmEntityContainer="db1Entities1">
           <EntitySetMapping Name="Articles">
             <EntityTypeMapping TypeName="db1Model.Article">
               <MappingFragment StoreEntitySet="Article">

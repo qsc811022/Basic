@@ -13,10 +13,10 @@ namespace WebApplication1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db1Entities : DbContext
+    public partial class db1Entities1 : DbContext
     {
-        public db1Entities()
-            : base("name=db1Entities")
+        public db1Entities1()
+            : base("name=db1Entities1")
         {
         }
     
