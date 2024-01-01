@@ -77,3 +77,7 @@ D:\C#\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
 D:\C#\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
 D:\C#\WebApplication1\obj\Debug\WebApplication1.dll
 D:\C#\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\C#\WebApplication1\bin\EntityFramework.dll
+D:\C#\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\C#\WebApplication1\bin\EntityFramework.xml
+D:\C#\WebApplication1\bin\EntityFramework.SqlServer.xml
